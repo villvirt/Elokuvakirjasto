@@ -1,18 +1,27 @@
+<head>        
+    <meta charset="utf-8">
+</head>
 <h2>Uusi elokuva</h2>
-<p>
-    <label>Nimi</label>
-    <input type="text" ng-model="name">
+<form name="movieForm">
+    <p>
+        <label>Nimi</label>
+        <input type="text" ng-model="name" required>
+
 </p>
 <p>
     <label>Julkaisuvuosi</label>
-    <input type="text" ng-model="release">
+    <input type="text" ng-model="release" required>
+
 </p>
 <p>
     <label>Ohjaaja</label>
-    <input type="text" ng-model="director">
+    <input type="text" ng-model="director" required>
+
 </p>
 <p>
     <label>Kuvaus</label>
-    <input type="text" ng-model="description">
+    <textarea type="text" ng-model="description" required></textarea>
+
 </p>
-<button ng-click="addMovie()">Lisää elokuva</button>
+<button  ng-click="addMovie()">Lisää elokuva</button>
+</form>

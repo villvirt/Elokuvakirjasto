@@ -1,4 +1,4 @@
-var MyApp = angular.module('MyApp', ['ngRoute']);
+var MyApp = angular.module('MyApp', ['ngRoute', 'firebase']);
 
 MyApp.config(function ($routeProvider) {
     $routeProvider
@@ -10,7 +10,11 @@ MyApp.config(function ($routeProvider) {
                 controller: 'AddMovieController',
                 templateUrl: 'app/views/addmovie.html'
             })
+            .when('/', {
+                controller: 'MovieController',
+                templateUrl: 'app/views/movies.html'
+            })
             .otherwise({
-                redirectTo: '/movies'
+                redirectTo: '/'
             });
 });

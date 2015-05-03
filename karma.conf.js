@@ -11,7 +11,7 @@ module.exports = function(config){
       'web/bower_components/angularfire/dist/angularfire.min.js',
       'web/app/app.js',
       'web/app/**/**.js',
-      'test/*.js'
+      'test/add_movie_test.js'
     ],
 
     autoWatch : true,
@@ -23,7 +23,7 @@ module.exports = function(config){
     plugins : [
             'karma-chrome-launcher',
             'karma-jasmine'
-            ],
+            ]
 
   });
 };
